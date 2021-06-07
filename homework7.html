@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con div{
+            height:60px;
+            color:white;
+            line-height: 60px;
+            text-align:center;
+            font-size:5px;
+        }
+        .con div:nth-child(1){           
+            background-color:red;
+        }
+        .con div:nth-child(2){
+            background-color:blue;
+        }
+        .con div:nth-child(3){
+            background-color:black;
+        }
+        .con div:nth-child(4){
+            background-color:orange;
+        }
+        @media screen and (min-width:1200px){
+            .con{
+                display:flex;               
+                margin:0 auto;
+            }
+            .con>div{
+                flex-basis:auto;
+                flex-grow:1;
+            }
+        }
+        @media screen and (max-width:1200px) and (min-width:992px){
+            .con{
+                flex-grow:3;
+                display:flex;
+                flex-wrap:wrap;
+                margin:0 auto;
+            }
+            .con div{
+                flex-basis:auto;
+                flex-grow:1;
+            }
+            .con div:nth-child(1){
+                flex-grow:3;
+                flex-basis:100%;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+            .con{
+                display:flex;
+                flex-wrap:wrap;
+                margin:0 auto;
+            }
+            .con div{
+                flex-basis:50%;
+                flex-grow:2;
+            }
+        }
+        @media screen and (max-width:768px){
+            .con{
+                display:flex;
+                flex-wrap:wrap;
+                margin:0 auto;
+            }
+            .con div{
+                flex-basis:100%;
+                flex-grow:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
